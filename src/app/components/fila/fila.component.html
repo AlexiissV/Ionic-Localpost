@@ -1,0 +1,56 @@
+<!--<app-header></app-header>
+<ion-card>
+  <ion-card-header class="ion-text-center">
+    <ion-card-title> {{ Paquete.tracked }}</ion-card-title>
+    <br>
+    <ion-text *ngIf="usuario.bodega_descarga == Paquete.bodega_descarga" color="principal">
+      <h1 class="size">{{ Paquete.fila }}</h1>
+    </ion-text>
+  </ion-card-header>
+<ion-card-content>
+  <ion-title class="ion-text-center">
+    <img style="margin: auto;" *ngIf="usuario.bodega_descarga != Paquete.bodega_descarga" src="/assets/img/nodescarga.png" alt="no descaragar" width="120px">
+  </ion-title>
+    <br>
+    <div *ngIf="usuario.bodega_descarga == Paquete.bodega_descarga" style="width: 100%; background-color: var(--ion-color-principal);">
+      <ion-text class="ion-text-center" color="light">
+        <h1>{{ Paquete.bodega_descarga_text }}</h1>
+      </ion-text>
+    </div>
+    <div *ngIf="usuario.bodega_descarga != Paquete.bodega_descarga" 
+          style="width: 100%; background-color: green">
+      <ion-text class="ion-text-center" color="light">
+        <h1>{{ Paquete.bodega_descarga_text }}</h1>
+      </ion-text>
+    </div>
+    <br>
+    <ion-text>
+      <ion-card-title>Estado: {{ Paquete.estado }} </ion-card-title>
+    </ion-text>
+    <ion-text>
+      <ion-card-title>Municipio: {{ Paquete.municipio }} </ion-card-title>
+    </ion-text>
+    <div style="width: 100%; background-color: var(--ion-color-principal);">
+      <ion-text class="ion-text-center" color="light">
+        <ion-label>Descargado por: {{ usuario.bodega_descarga_text }}</ion-label>
+      </ion-text>
+    </div>
+    <br>
+    <ion-item class="login" color="crescak">
+    <ion-input name='peso' type="number" placeholder="Peso" [(ngModel)]="peso"></ion-input>
+  </ion-item>
+<ion-row class="fondo">
+  <ion-col>
+    <ion-button class="ion-margin-top" (click)="cancelar()" shape="round"  color="danger">
+      <ion-icon color="light" name="close"></ion-icon>
+    </ion-button>
+  </ion-col>
+
+  <ion-col class="ion-text-end">
+    <ion-button [disabled]="peso== null || peso== 0" class="ion-margin-top" (click)="realizarmovimiento()" shape="round" color="success">
+      <ion-icon color="light" name="checkmark"></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+</ion-card-content>
+</ion-card>-->

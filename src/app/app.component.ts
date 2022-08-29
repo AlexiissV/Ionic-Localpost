@@ -20,8 +20,20 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      this.statusBar.styleLightContent();
+      this.statusBar.backgroundColorByHexString('#1976d2');
       this.splashScreen.hide();
+      this.checkDarkTheme();
     });
+  }
+
+  checkDarkTheme() {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    if ( prefersDark.matches ) {
+        document.body.setAttribute('color-theme', 'light');
+    }else{
+      document.body.setAttribute('color-theme', 'light');
+
+    }
   }
 }

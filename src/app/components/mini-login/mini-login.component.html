@@ -1,0 +1,23 @@
+<form (ngSubmit)='login( fLogin )' #fLogin='ngForm'> 
+  <ion-card class="ion-padding ion-text-center">
+    <h4>Inicia Sesión</h4>
+    <ion-text>
+      Ingresa con tu cuenta de usuario
+    </ion-text>
+    <br>
+    <br>
+    <img src='assets/img/logo.png' alt='logo'>
+    <ion-item class="login" color='crescad'>
+      <ion-icon color='principal' slot="start" name="person"></ion-icon>
+      <ion-input name="usuario"  placeholder='USUARIO' type='name' [(ngModel)]='loginuser.username' required ></ion-input>
+  </ion-item>
+  <br>
+  <ion-item class="login" color='crescad'>
+    <ion-icon color='principal' slot="start" name="lock-closed-sharp"></ion-icon>
+    <ion-input name="password" placeholder='CONTRASEÑA'  type='password' [(ngModel)]='loginuser.password' required ></ion-input>
+  </ion-item>
+  <br>
+  <br>
+  <ion-button   shape="round" type='submit' color="login" >INGRESAR</ion-button>
+  </ion-card >
+</form>

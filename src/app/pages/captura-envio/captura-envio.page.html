@@ -1,0 +1,85 @@
+<app-header [back]=true></app-header>
+<ion-toolbar color="principal">
+    <ion-title class="ion-text-center" color="light">Captura Envío</ion-title>
+</ion-toolbar>
+<ion-content>
+    <ion-card>
+        <ion-card-header class="ion-text-center" color="principal">
+            <ion-card-title color="light">MEX-USA</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item>
+                <ion-label>Envia:</ion-label>
+                <ion-input class="login" required></ion-input>
+                <ion-button class="ion-margin-start" shape="round" color="principal">
+                    <ion-icon name="add"></ion-icon>
+                </ion-button>
+            </ion-item>
+            <ion-item>
+                <ion-label>Teléfono:</ion-label>
+                <ion-input class="login" required></ion-input>
+            </ion-item>
+            <ion-item >
+                <ion-label>Origen:</ion-label>
+                <ion-input class="login" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Recibe:</ion-label>
+                <ion-input class="login" required></ion-input>
+                <ion-button class="ion-margin-start" shape="round" color="principal">
+                    <ion-icon name="add"></ion-icon>
+                </ion-button>
+            </ion-item>
+            <ion-item>
+                <ion-label>Teléfono:</ion-label>
+                <ion-input class="login" required></ion-input>
+            </ion-item>
+            <ion-item class="login" color="cresca">
+                <ion-label color="principal">Sucursal</ion-label>
+                <ion-select value="peperoni">
+                    <ion-select-option value="peperoni">Peperoni</ion-select-option>
+                    <ion-select-option value="hawaii">Hawaii</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="ion-text-center">
+        <ion-card-header class="ion-text-center" color="principal">
+            <ion-card-title>Contenido</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-grid fixed>
+                <ion-row>
+                    <ion-col size="6">
+                        <ion-item>
+                            <ion-label position="floating"position="floating">Libras:</ion-label>
+                            <ion-input class="login2" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-item >
+                            <ion-label position="floating">Valor Declarado:</ion-label>
+                            <ion-input class="login2" required></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-item>
+                            <ion-label position="floating">Comentario:</ion-label>
+                            <ion-textarea class="comentario" required></ion-textarea>
+                          </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+                <ion-button class="ion-text-center" color="principal" shape="round">
+                    agregar
+                </ion-button>
+        </ion-card-content>
+    </ion-card>
+    <br>
+    <ion-button color="principal" expand="block">
+        <ion-icon slot="start" name="save"></ion-icon>
+        guardar
+    </ion-button>
+</ion-content>

@@ -1,0 +1,43 @@
+<app-header [si]=true></app-header>
+<ion-content [fullscreen]="true">
+  <ion-img src="/assets/img/fondo.jpg"></ion-img>
+  <ion-text class="flotante ion-text-center">
+    <h1>Hacemos de nuestros clientes nuestra prioridad</h1>
+  </ion-text>
+  <ion-row class="top ion-padding">
+    <ion-col offset-4>
+    </ion-col>
+    <ion-col>
+      <ion-card class="ion-text-center"routerLink='/sucursales'>
+        <ion-card-header>
+          <img src="/assets/icon/mapa.svg" alt="reenbolso">
+          <ion-card-subtitle color="light">Sucursal</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+  </ion-row>
+  <ion-row class="top ion-padding">
+    <ion-col>
+      <ion-card class="ion-text-center" routerLink='/entregar-paquetes' >
+        <ion-card-header>
+          <img src="/assets/icon/paquetes.svg" alt="factura">
+          <ion-card-subtitle color="light">Entregar paquetes</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+      <ion-card class="ion-text-center ion-padding">
+        <a  href="tel:+34000000000">
+          <div>
+          <img src="/assets/icon/add_user.svg">
+        </div>
+        </a>
+        <ion-card-subtitle color="light">Nuevo usuario</ion-card-subtitle>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

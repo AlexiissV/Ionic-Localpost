@@ -1,0 +1,63 @@
+<app-header></app-header>
+<ion-content class="ion-margin">
+  <ion-text>
+    <h1>Elemento escaneados: {{folios.length}}</h1>
+  </ion-text>
+  <p>{{ folios }}</p>
+  <ion-card color="medium" class="ion-margin ion-padding ion-text-center">
+    <ion-text>Estado de envio</ion-text>
+    <br>
+    <br>
+    <ion-label>Status</ion-label> 
+    <ion-select [(ngModel)]="selecioin" (ionChange)="OnChange($event)" interface="popover" required>
+      <ion-select-option *ngFor="let sucursal of sucrsals" value="{{sucursal.id}}">
+        {{sucursal.nombre}}
+      </ion-select-option>
+    </ion-select>
+    <div *ngIf="selecioin==20 && viajes.length>=1" class="ion-margin-top">
+      <ion-label>Viajes</ion-label>
+      <ion-select [(ngModel)]="selecioin1" (ionChange)="OnChange2($event)" interface="popover" required>
+        <ion-select-option *ngFor="let viaje of viajes" value="{{viaje.id}}">
+          {{viaje.nombre}}
+        </ion-select-option>
+      </ion-select>
+    </div>
+    <div *ngIf="status == '55' && mx.length>=1" class="ion-margin-top">
+      <ion-label>Sucursales mx</ion-label>
+      <ion-select (ionChange)="sucursalmx($event)" interface="popover" required >
+        <ion-select-option  *ngFor="let viaje of mx"value="{{viaje.id}}">
+          {{viaje.nombre}}
+        </ion-select-option>
+      </ion-select>
+    </div>
+    <div *ngIf="status == '30' && bodegas.length>=1" class="ion-margin-top">
+      <ion-label>Bodegas mx</ion-label>
+      <ion-select (ionChange)="bodegamx($event)" interface="popover" required >
+        <ion-select-option  *ngFor="let bodega of bodegas"value="{{bodega.id}}">
+          {{bodega.nombre}}
+        </ion-select-option>
+      </ion-select>
+    </div>
+    <div *ngIf="status =='45'">
+        <ion-label position="floating">Paqueteria</ion-label>
+        <ion-input class="login" type="text" [(ngModel)]="paqueteria" placeholder="Ej: DHL" required>
+        </ion-input>
+      <br>
+        <ion-label position="floating">No. Guia</ion-label>
+        <ion-input class="login" type="text" [(ngModel)]="Nguia" placeholder="Ej: 00252001" required>
+        </ion-input>
+    </div>
+    <br>
+    <ion-button class="ion-text-end" color="principal" (click)="validarcampos()">cambiar</ion-button>
+  </ion-card>
+  <br>
+  <ion-list *ngIf="messages.length>=1">
+    <ion-item *ngFor="let message of messages">
+      <img slot="start" src="/assets/icon/comentario.svg" alt="icono camioneta" width="35px">      
+      <ion-label class="ion-text-sm-left">
+        <ion-label>{{message.tracked}}</ion-label>
+        <ion-text class="mitex">{{message.message}}</ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

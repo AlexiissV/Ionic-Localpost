@@ -1,5 +1,7 @@
 {
-  "name": "blank",
-  "integrations": {},
+  "name": "pueblaexpress",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

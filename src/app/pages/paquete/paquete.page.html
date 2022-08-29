@@ -1,0 +1,71 @@
+<app-header></app-header>
+<ion-content>
+  <ion-card color="medium" class="ion-margin ion-padding ion-text-center">
+    <ion-text>Estado de envio</ion-text>
+    <br>
+    <ion-text color="danger">
+      <h3>Estatus actual  {{paquete.tipo_movimiento_text}}</h3>
+    </ion-text>
+      <ion-label>Status</ion-label>
+      <ion-select [(ngModel)]="selecioin" (ionChange)="OnChange($event)" interface="popover" required>
+        <ion-select-option  *ngFor="let sucursal of sucrsals"value="{{sucursal.id}}">
+          {{sucursal.nombre}}
+        </ion-select-option>
+      </ion-select>
+    <div *ngIf="selecioin==20 && viajes.length>=1" class="ion-margin-top">
+      <ion-label>Viajes</ion-label>
+      <ion-select [(ngModel)]="selecioin1" (ionChange)="OnChange2($event)" interface="popover" required >
+        <ion-select-option  *ngFor="let viaje of viajes"value="{{viaje.id}}">
+          {{viaje.nombre}}
+        </ion-select-option>
+      </ion-select>
+    </div>
+    <div *ngIf="status == '55' && mx.length>=1" class="ion-margin-top">
+      <ion-label>Sucursales mx</ion-label>
+      <ion-select (ionChange)="sucursalmx($event)" interface="popover" required >
+        <ion-select-option  *ngFor="let viaje of mx"value="{{viaje.id}}">
+          {{viaje.nombre}}
+        </ion-select-option>
+      </ion-select>
+    </div>
+    <div *ngIf="status == '30' && bodegas.length>=1" class="ion-margin-top">
+      <ion-label>Bodegas mx</ion-label>
+      <ion-select (ionChange)="bodegamx($event)" interface="popover" required >
+        <ion-select-option  *ngFor="let bodega of bodegas"value="{{bodega.id}}">
+          {{bodega.nombre}}
+        </ion-select-option>
+      </ion-select>
+    </div>
+    <div *ngIf="status =='45'">
+        <ion-label position="floating">Paqueteria</ion-label>
+        <ion-input class="login" type="text" [(ngModel)]="paqueteria" placeholder="Ej: DHL" required>
+        </ion-input>
+      <br>
+        <ion-label position="floating">No. Guia</ion-label>
+        <ion-input class="login" type="text" [(ngModel)]="Nguia" placeholder="Ej: 00252001" required>
+        </ion-input>
+    </div>
+    <br>
+    <ion-button class="ion-text-end" (click)="validarcampos()" color="principal">cambiar</ion-button>
+  </ion-card>
+<ion-card>
+  <ion-card-header >
+    <ion-card-title class="ion-text-center">Información</ion-card-title>
+  </ion-card-header>
+  <ion-card-content  class="ion-padding" >
+    <ion-label>Folio : {{paquete.tracked}}</ion-label>
+    <br>
+    <ion-label>Cliente Receptor : {{paquete.destinatario}}</ion-label>
+    <br>
+    <ion-label>dirección de entrega :  {{paquete.direccion_destino}}</ion-label>
+    <br>
+    <ion-label>Teléfono Receptor:  {{paquete.telefono_destinatario}}  </ion-label>
+    <br>
+    <ion-label>Numero de piezas :  {{paquete.cantidad}}  </ion-label>
+    <br>
+    <ion-label>Total de peso :  {{paquete.peso}} </ion-label>
+    <br>
+    <ion-label>Observacciones :{{paquete.comentarios}}  </ion-label>
+  </ion-card-content>
+</ion-card>
+</ion-content>

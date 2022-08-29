@@ -1,0 +1,21 @@
+<app-header [back]=true></app-header>
+<ion-content>
+  <ion-list>
+    <ion-card fixed *ngFor="let carro of trailers" detail (click)="onid(carro.id)">
+    <ion-grid >
+      <ion-row>
+          <ion-col size="2"> 
+            <img style="position: absolute; margin: auto;" src="/assets/icon/remolque.svg" alt="icono camioneta" width="35px">
+            </ion-col>   
+            <ion-col size="10">
+              <ion-label>{{carro.nombre}}</ion-label>
+              <br>
+              <ion-text>
+                <ion-label><b>{{ carro.id }} </b></ion-label>
+              </ion-text>
+            </ion-col>
+            </ion-row>
+            </ion-grid>
+          </ion-card>
+  </ion-list>
+</ion-content>

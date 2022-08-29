@@ -1,0 +1,28 @@
+<app-header [home]=true></app-header>
+<ion-content>
+<ion-button (click)="escanear()" class="ion-margin-top" color="principal"  expand="block">
+  Escaner Sucursal
+</ion-button>
+<br>
+<ion-card *ngIf="entrega.ArrayProductos.length >=1" color="medium" class="ion-margin-top ion-text-center">
+  <ion-card-header>
+    <ion-card-title>Sucursales por actualizar:</ion-card-title>
+    <ion-card-title>{{ entrega.ArrayProductos.length }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-button (click)="Actualizar()" color="principal" expand="block" shape="round">
+      Actualizar
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+<br>
+  <ion-list *ngIf="messages.length>=1">
+    <ion-item *ngFor="let message of messages">
+      <img slot="start" src="/assets/icon/comentario.svg" alt="icono camioneta" width="35px">      
+      <ion-label class="ion-text-sm-left">
+        <ion-label>{{message.tracked}}</ion-label>
+        <ion-text class="mitex">{{message.message}}</ion-text>>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

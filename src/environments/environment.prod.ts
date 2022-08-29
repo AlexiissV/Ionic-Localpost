@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  url: 'https://admin.localpost.com.mx/web/v1'
+
 };

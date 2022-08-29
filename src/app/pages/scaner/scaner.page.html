@@ -1,0 +1,25 @@
+<app-header [back]=true></app-header>
+<ion-content>
+<ion-row>
+  <ion-col (click)="scanerone()" class="ion-padding" size="6">
+    <ion-list>
+      <ion-avatar class="avatar">
+        <img src="/assets/icon/codigo-qr.svg" />
+      </ion-avatar>  
+      <ion-text class="ion-text-center" color="principal">
+        <h3>Escaner</h3>
+      </ion-text>
+    </ion-list>
+  </ion-col>
+  <ion-col (click)="scanerlote()" class=" ion-padding" size="6">
+    <ion-list>
+      <ion-avatar  class="avatar">
+        <img src="/assets/icon/barcode-scanner.svg" width="10px" height="10px" />
+      </ion-avatar>
+      <ion-text class="ion-text-center" color="principal">
+        <h3>Escaner lote</h3>
+      </ion-text>
+    </ion-list>
+  </ion-col>
+</ion-row>
+</ion-content>

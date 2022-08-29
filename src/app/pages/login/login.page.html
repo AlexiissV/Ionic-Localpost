@@ -1,0 +1,35 @@
+<ion-content>
+    <ion-slides  class="mainSlide" [options]='swiper0pts' >
+      <ion-slide>
+        <form (ngSubmit)='login( fLogin )' #fLogin='ngForm'> 
+          <ion-card class="ion-padding ion-text-center">
+            <h4>Inicia Sesión</h4>
+            <ion-text>
+              Ingresa con tu cuenta de usuario
+            </ion-text>
+            <br>
+            <br>
+            <img src='assets/img/logo.png' alt='logo'>
+            <ion-item class="login" color='crescad'>
+              <ion-label>Partners</ion-label>
+              <ion-toggle mode="ios" name="parters" (ionChange)="cambio($event)" [(ngModel)]="si"></ion-toggle>
+            </ion-item>
+            <br>
+            <ion-item class="login" color='crescad'>
+              <ion-icon color="principal" slot="start" name="person"></ion-icon>
+              <ion-input name="usuario"  placeholder='USUARIO' type='name' [(ngModel)]='loginuser.username' required ></ion-input>
+          </ion-item>
+          <br>
+          <ion-item class="login" color='crescad'>
+            <ion-icon color="principal" slot="start" name="lock-closed-sharp"></ion-icon>
+            <ion-input name="password" placeholder='CONTRASEÑA'  type='password' [(ngModel)]='loginuser.password' required (keyup.enter)="login( fLogin )" ></ion-input>
+          </ion-item>
+          <ion-button   shape="round" type='submit' color="principal" >INGRESAR</ion-button>
+          </ion-card >
+        </form>
+        <div class="abajo">
+        <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+      </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-content>

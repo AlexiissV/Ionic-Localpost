@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="principal">
+    <ion-title>
+      <ion-img class="img"  src="/assets/img/logoexpress.png"></ion-img>
+    </ion-title>
+    <ion-buttons *ngIf="menu" slot="start">
+      <ion-menu-button slot="iicon-only" menu="menuprincipal"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons *ngIf="back" slot="start">
+      <ion-back-button slot="start" icon="chevron-back-outline" defaultHref="/menu"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons *ngIf="home" slot="start">
+      <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons *ngIf="si" slot="end">
+      <ion-button routerLink='/login'>
+      <img src="/assets/icon/entrar.png" width="30px"/>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
